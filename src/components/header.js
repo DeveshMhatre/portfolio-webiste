@@ -33,7 +33,7 @@ const Header = () => {
         ) : (
           <Link
             to="/"
-            title="Go Back"
+            title="Home"
             className="head__nav--close"
             aria-label="Back to Home"
           >

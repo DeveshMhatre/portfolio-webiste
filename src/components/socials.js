@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import SocialLink from './social-link'
 
@@ -31,13 +32,14 @@ const Socials = () => {
       <SocialLink name="Codepen" link={codepenLink}>
         <Codepen />
       </SocialLink>
-      <button
+      <Link
+        to="/contact"
         className="btn btn--icon"
-        onClick={copyToClipboard}
-        aria-label="Get my email address"
+        title="Contact me"
+        aria-label="Contact me"
       >
         <Email />
-      </button>
+      </Link>
     </div>
   )
 }
