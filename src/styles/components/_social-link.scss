@@ -1,0 +1,12 @@
+.social-link {
+  display: block;
+
+  width: clamp(3rem, 4vw, 4rem);
+  height: clamp(3rem, 4vw, 4rem);
+
+  transition: transform 150ms ease-in;
+
+  &:hover {
+    transform: scale(0.8);
+  }
+}

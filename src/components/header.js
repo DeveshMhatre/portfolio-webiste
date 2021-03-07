@@ -11,8 +11,8 @@ const Header = () => {
 
   useEffect(() => {
     gsap.to(headRef.current, {
-      opacity: 1,
       y: 10,
+      opacity: 1,
       duration: 0.5,
       delay: 1,
     })
@@ -25,7 +25,7 @@ const Header = () => {
         {location.pathname === '/' ? (
           <Link
             to="/"
-            activeStyle={{ textDecoration: 'line-through' }}
+            activeStyle={{ textDecoration: 'line-through var(--accent)' }}
             className="head__nav--link"
           >
             Portfolio
@@ -37,7 +37,7 @@ const Header = () => {
         )}
         <Link
           to="/about"
-          activeStyle={{ textDecoration: 'line-through' }}
+          activeStyle={{ textDecoration: 'line-through var(--accent)' }}
           className="head__nav--link"
         >
           About
