@@ -1,0 +1,57 @@
+.splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  width: 100%;
+
+  background-color: var(--dark);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+    &--loader {
+      position: relative;
+
+      height: clamp(1rem, 1vh, 2rem);
+      width: clamp(25rem, 50vw, 50rem);
+
+      border: 0.1rem solid var(--light);
+      border-radius: 5rem;
+    }
+  }
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 0%;
+
+  border: none;
+  border-radius: 5rem;
+
+  background-color: var(--accent);
+
+  animation: progress 1000ms ease-out;
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
