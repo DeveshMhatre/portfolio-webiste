@@ -25,9 +25,14 @@ const About = () => {
           <h3 className="about__info--subheading">
             I am a Front-End Web Developer
           </h3>
-          <button className="btn btn--rounded about__info--cta">
+          <a
+            href="../assets/devesh-mhatre-frontend-resume.pdf"
+            className="btn btn--rounded about__info--cta"
+            title="Download Resume"
+            download
+          >
             My Resume
-          </button>
+          </a>
         </section>
         <section className="about__socials">
           <h3 className="about__socials--heading">Connect with me</h3>

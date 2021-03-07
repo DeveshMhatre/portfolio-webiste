@@ -7,6 +7,7 @@ const SocialLink = ({ name, link, children }) => (
     className="social-link"
     target="_blank"
     rel="noreferrer"
+    title={name}
     aria-label={name}
   >
     {children}

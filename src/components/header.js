@@ -31,7 +31,12 @@ const Header = () => {
             Portfolio
           </Link>
         ) : (
-          <Link to="/" className="head__nav--close" aria-label="Back to Home">
+          <Link
+            to="/"
+            title="Go Back"
+            className="head__nav--close"
+            aria-label="Back to Home"
+          >
             <Close />
           </Link>
         )}
