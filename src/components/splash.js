@@ -4,23 +4,23 @@ import { gsap } from 'gsap'
 import SiteLogo from './site-logo'
 
 const Splash = () => {
-  const splash = useRef(null)
-  const progressBar = useRef(null)
-  const progress = useRef(null)
+  const splashRef = useRef(null)
+  const progressBarRef = useRef(null)
+  const progressRef = useRef(null)
 
   useEffect(() => {
-    gsap.to(progress.current, {
+    gsap.to(progressRef.current, {
       width: '100%',
       duration: 0.5,
       ease: 'power3.out',
     })
-    gsap.to(progressBar.current, {
+    gsap.to(progressBarRef.current, {
       opacity: 0,
       y: -5,
       duration: 0.5,
       delay: 0.5,
     })
-    gsap.to(splash.current, {
+    gsap.to(splashRef.current, {
       display: 'none',
       opacity: 0,
       duration: 0.5,
@@ -29,11 +29,11 @@ const Splash = () => {
   }, [])
 
   return (
-    <section ref={splash} className="splash">
+    <section ref={splashRef} className="splash">
       <div className="splash__content">
         <SiteLogo />
-        <div ref={progressBar} className="splash__content--loader">
-          <div ref={progress} className="progress"></div>
+        <div ref={progressBarRef} className="splash__content--loader">
+          <div ref={progressRef} className="progress"></div>
         </div>
       </div>
     </section>

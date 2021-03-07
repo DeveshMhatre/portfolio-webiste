@@ -1,6 +1,8 @@
 .head {
   width: 100%;
-  height: clamp(6rem, 10vh, 8rem);
+  height: clamp(6rem, 8vh, 8rem);
+
+  opacity: 0;
 
   &__nav {
     margin: 0 auto;
