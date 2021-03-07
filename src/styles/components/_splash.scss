@@ -42,16 +42,4 @@
   border-radius: 5rem;
 
   background-color: var(--accent);
-
-  animation: progress 1000ms ease-out;
-}
-
-@keyframes progress {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 100%;
-  }
 }
