@@ -1,54 +1,51 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React, { useEffect, useRef } from 'react'
+import { Link } from 'gatsby'
+import { gsap } from 'gsap'
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import Layout from '../layouts/layout'
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+import FourOhFour from '../assets/four-oh-four.svg'
 
-// markup
-const NotFoundPage = () => {
+const PageNotFound = () => {
+  const fourRef = useRef(null)
+  const fourImgRef = useRef(null)
+
+  useEffect(() => {
+    gsap.to(fourRef.current, {
+      opacity: 1,
+      duration: 0,
+      delay: 0.5,
+    })
+
+    gsap.to(fourImgRef.current, {
+      x: 0,
+      duration: 2,
+      delay: 1.5,
+      ease: 'bounce.out',
+    })
+
+    gsap.to(fourImgRef.current, {
+      opacity: 1,
+      duration: 0.5,
+      delay: 1.5,
+    })
+  })
+
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <Layout>
+      <article ref={fourRef} className="main info-page">
+        <h3 className="info-page__heading">
+          Could not find the page you are looking for&hellip;
+        </h3>
+        <Link to="/" className="btn btn--rounded info-page__link">
+          Back to Home
+        </Link>
+        <div ref={fourImgRef} className="info-page__four-oh-four">
+          <FourOhFour />
+        </div>
+      </article>
+    </Layout>
   )
 }
 
-export default NotFoundPage
+export default PageNotFound

@@ -9,22 +9,28 @@ const Splash = () => {
   const progressRef = useRef(null)
 
   useEffect(() => {
+    gsap.from(splashRef.current, {
+      y: '-100vh',
+      duration: 0.5,
+    })
     gsap.to(progressRef.current, {
       width: '100%',
       duration: 0.5,
       ease: 'power3.out',
+      delay: 0.5,
     })
     gsap.to(progressBarRef.current, {
       opacity: 0,
       y: -5,
       duration: 0.5,
-      delay: 0.5,
+      delay: 1,
     })
     gsap.to(splashRef.current, {
       display: 'none',
+      y: '-100vh',
       opacity: 0,
       duration: 0.5,
-      delay: 1,
+      delay: 1.5,
     })
   }, [])
 

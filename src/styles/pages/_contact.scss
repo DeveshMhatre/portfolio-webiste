@@ -1,7 +1,10 @@
 .contact {
-  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  transform: translateY(1rem);
+  opacity: 0;
 
   &__heading {
     font-family: $main-font;
@@ -30,7 +33,7 @@
     }
 
     &--submit {
-      margin: 5rem 0;
+      margin-top: 2rem;
     }
 
     label {

@@ -1,12 +1,11 @@
 .about {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
 
   font-family: $main-font;
 
   opacity: 0;
-  transform: translateY(1rem);
 
   &__info {
     display: flex;
