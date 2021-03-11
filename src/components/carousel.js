@@ -5,6 +5,7 @@ import CarouselItem from './carouselItem'
 
 import PrevBtn from '../assets/left.svg'
 import NextBtn from '../assets/right.svg'
+import CarouselIndicator from './carouselIndicator'
 
 const Carousel = ({ edges }) => {
   const [current, setCurrent] = useState(0)
@@ -33,7 +34,10 @@ const Carousel = ({ edges }) => {
       >
         <PrevBtn />
       </button>
-      {Projects}
+      <div className="carousel__slider">
+        {Projects}
+        <CarouselIndicator current={current} slideLen={slidesLen} />
+      </div>
       <button
         className="carousel__btn--right"
         onClick={nextSlide}
