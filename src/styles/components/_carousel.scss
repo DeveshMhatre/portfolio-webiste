@@ -30,3 +30,13 @@
     right: 5rem;
   }
 }
+
+@media all and (max-width: 600px) {
+  .carousel {
+    justify-content: center;
+
+    &__btn--left {
+      display: none;
+    }
+  }
+}

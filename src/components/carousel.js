@@ -6,6 +6,7 @@ import CarouselItem from './carouselItem'
 import PrevBtn from '../assets/left.svg'
 import NextBtn from '../assets/right.svg'
 import CarouselIndicator from './carouselIndicator'
+import { useSwipeable } from 'react-swipeable'
 
 const Carousel = ({ edges }) => {
   const [current, setCurrent] = useState(0)
@@ -16,6 +17,11 @@ const Carousel = ({ edges }) => {
     (edge, index) =>
       current === index && <CarouselItem key={edge.node.id} edge={edge.node} />,
   )
+
+  const handlers = useSwipeable({
+    onSwipedLeft: () => nextSlide(),
+    onSwipedRight: () => prevSlide(),
+  })
 
   const prevSlide = () => {
     setCurrent(current === 0 ? slidesLen - 1 : current - 1)
@@ -34,7 +40,7 @@ const Carousel = ({ edges }) => {
       >
         <PrevBtn />
       </button>
-      <div className="carousel__slider">
+      <div className="carousel__slider" {...handlers}>
         {Projects}
         <CarouselIndicator current={current} slideLen={slidesLen} />
       </div>

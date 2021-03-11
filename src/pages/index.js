@@ -73,11 +73,7 @@ export const projectQuery = graphql`
             techUsed
             screenshot {
               childImageSharp {
-                gatsbyImageData(
-                  width: 600
-                  placeholder: BLURRED
-                  formats: [JPG]
-                )
+                gatsbyImageData(width: 700, formats: [JPG])
                 fluid {
                   src
                 }

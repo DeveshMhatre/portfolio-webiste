@@ -73,7 +73,7 @@ export const postQuery = graphql`
         description
         screenshot {
           childImageSharp {
-            gatsbyImageData(width: 600, placeholder: BLURRED, formats: [JPG])
+            gatsbyImageData(width: 700, placeholder: BLURRED, formats: [JPG])
             fluid {
               src
             }
