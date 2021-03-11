@@ -1,5 +1,49 @@
 .carousel-item {
+  align-self: stretch;
   width: clamp(20rem, 50vw, 100rem);
 
-  border: 0.1rem solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  opacity: 0;
+
+  &__title {
+    margin-bottom: 2rem;
+
+    font-size: clamp(2.4rem, 5vw, 4.8rem);
+    letter-spacing: 0.05em;
+
+    text-align: center;
+  }
+
+  &__btns {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+
+    font-size: clamp(1.4rem, 2vw, 2rem);
+
+    &--demo {
+      border: 0.1rem solid var(--accent);
+      border-top-left-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+      padding: clamp(0.5rem, 1vw, 1rem);
+
+      color: var(--light);
+    }
+
+    &--details {
+      border: 0.1rem solid var(--accent);
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      padding: clamp(0.5rem, 1vw, 1rem);
+
+      color: var(--light);
+    }
+  }
 }

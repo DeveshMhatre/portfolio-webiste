@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 
 import CarouselItem from './carouselItem'
 
@@ -8,9 +9,12 @@ import NextBtn from '../assets/right.svg'
 const Carousel = ({ edges }) => {
   const [current, setCurrent] = useState(0)
 
-  const Projects = edges.map((edge) => (
-    <CarouselItem key={edge.node.id} edge={edge.node} />
-  ))
+  const slidesLen = edges.length
+
+  const Projects = edges.map(
+    (edge, index) =>
+      current === index && <CarouselItem key={edge.node.id} edge={edge.node} />,
+  )
 
   const prevSlide = () => {
     setCurrent(current === 0 ? slidesLen - 1 : current - 1)
@@ -25,7 +29,7 @@ const Carousel = ({ edges }) => {
       <button
         className="carousel__btn--left"
         onClick={prevSlide}
-        aria-lable="Go Left"
+        aria-label="Go Left"
       >
         <PrevBtn />
       </button>
@@ -33,7 +37,7 @@ const Carousel = ({ edges }) => {
       <button
         className="carousel__btn--right"
         onClick={nextSlide}
-        aria-lable="Go Right"
+        aria-label="Go Right"
       >
         <NextBtn />
       </button>

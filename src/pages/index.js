@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 
 import { gsap } from 'gsap'
@@ -71,7 +72,7 @@ export const projectQuery = graphql`
             screenshot {
               childImageSharp {
                 gatsbyImageData(
-                  width: 500
+                  width: 600
                   placeholder: BLURRED
                   formats: [JPG]
                 )
