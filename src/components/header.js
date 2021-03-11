@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'gatsby'
 import { useLocation } from '@reach/router'
+import { gsap } from 'gsap'
 
 import SiteLogo from '../components/site-logo'
 
@@ -9,8 +10,18 @@ import Close from '../assets/close.svg'
 const Header = () => {
   const { pathname } = useLocation()
 
+  const headerRef = useRef(null)
+
+  useEffect(() => {
+    gsap.to(headerRef.current, {
+      opacity: 1,
+      duration: 0,
+      delay: 0.5,
+    })
+  })
+
   return (
-    <header className="head">
+    <header ref={headerRef} className="head">
       <nav className="head__nav">
         <SiteLogo />
         {pathname === '/' ? (

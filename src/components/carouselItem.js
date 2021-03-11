@@ -33,7 +33,10 @@ const CarouselItem = ({ edge }) => {
         >
           View Demo
         </a>
-        <Link to="/about" className="carousel-item__btns--details">
+        <Link
+          to={edge.frontmatter.slug}
+          className="carousel-item__btns--details"
+        >
           View Details
         </Link>
       </div>

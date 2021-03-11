@@ -2,6 +2,8 @@
   width: 100%;
   height: clamp(6rem, 8vh, 8rem);
 
+  opacity: 0;
+
   &__nav {
     margin: 0 auto;
     width: clamp(32rem, 80vw, 100rem);
