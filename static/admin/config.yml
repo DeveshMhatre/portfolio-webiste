@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+publish_mode: editorial_workflow
+
+collections:
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'content/projects'
+    create: true
+    slug: 'index'
+    media_folder: ''
+    public_folder: ''
+    path: '{{title}}/index'
+    preview_path: projects/{{slug}}
+    editor:
+      preview: false
+    fields:
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { lavel: 'Screenshot', name: 'screenshot', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Demo Link', name: 'demoLink', widget: 'string' }
+      - { label: 'Code Link', name: 'codeLink', widget: 'string' }
+      - {
+          label: 'Tech Used',
+          name: 'techUsed',
+          widget: 'list',
+          field: { lable: 'Tech', name: 'tech', widget: 'string' },
+        }

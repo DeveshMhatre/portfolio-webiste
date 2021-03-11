@@ -1,0 +1,22 @@
+.carousel {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__btn--left {
+    width: clamp(3rem, 4vw, 4rem);
+    height: clamp(3rem, 4vw, 4rem);
+
+    border: none;
+
+    background: none;
+  }
+
+  &__btn--right {
+    @extend .carousel__btn--left;
+
+    right: 5rem;
+  }
+}

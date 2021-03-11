@@ -1,0 +1,5 @@
+.carousel-item {
+  width: clamp(20rem, 50vw, 100rem);
+
+  border: 0.1rem solid var(--accent);
+}
