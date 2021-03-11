@@ -44,7 +44,7 @@ Home.propTypes = {
               description: PropTypes.string.isRequired,
               demoLink: PropTypes.string.isRequired,
               codeLink: PropTypes.string.isRequired,
-              techUsed: PropTypes.arrayOf(string).isRequired,
+              techUsed: PropTypes.arrayOf(PropTypes.string).isRequired,
             }),
           }),
         }),
