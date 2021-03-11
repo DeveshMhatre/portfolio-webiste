@@ -33,13 +33,37 @@ const ProjectTemplate = ({ data }) => {
         article
       />
       <article ref={projectRef} className="main project">
-        <section className="project__head">
-          <h1 className="project__head--title">{frontmatter.title}</h1>
-          <GatsbyImage
-            className="project__head--img"
-            image={image}
-            alt={frontmatter.title}
-          />
+        <h1 className="project__title">{frontmatter.title}</h1>
+        <GatsbyImage
+          className="project__img"
+          image={image}
+          alt={frontmatter.title}
+        />
+        <p className="project__desc">{frontmatter.description}</p>
+        <section className="project__tech">
+          {frontmatter.techUsed.map((tech, index) => (
+            <span key={index} className="project__tech--item">
+              {tech}
+            </span>
+          ))}
+        </section>
+        <section className="project__btns">
+          <a
+            href={frontmatter.demoLink}
+            className="project__btns--demo"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Demo
+          </a>
+          <a
+            href={frontmatter.codeLink}
+            className="project__btns--code"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Code
+          </a>
         </section>
       </article>
     </Layout>

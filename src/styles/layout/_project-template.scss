@@ -1,3 +1,76 @@
 .project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  font-family: $main-font;
+
   opacity: 0;
+
+  &__title {
+    font-size: clamp(2.4rem, 5vw, 4.8rem);
+    letter-spacing: 0.05em;
+
+    text-align: center;
+  }
+
+  &__desc {
+    font-size: clamp(1.6rem, 2vw, 2rem);
+
+    text-align: center;
+  }
+
+  &__tech {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    &--item {
+      border: 0.1rem solid var(--accent);
+      border-radius: 2rem;
+      padding: 0.6rem;
+    }
+  }
+
+  &__btns {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+
+    font-size: clamp(1.4rem, 2vw, 2rem);
+
+    &--demo {
+      border: 0.1rem solid var(--accent);
+      border-top-left-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+      padding: clamp(0.5rem, 1vw, 1rem);
+
+      color: var(--light);
+
+      &:hover {
+        background-color: var(--light);
+        color: var(--dark);
+      }
+    }
+
+    &--code {
+      border: 0.1rem solid var(--accent);
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
+      padding: clamp(0.5rem, 1vw, 1rem);
+
+      color: var(--light);
+
+      &:hover {
+        background-color: var(--light);
+        color: var(--dark);
+      }
+    }
+  }
 }
