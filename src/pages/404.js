@@ -4,6 +4,8 @@ import { gsap } from 'gsap'
 
 import Layout from '../layouts/layout'
 
+import SEO from './seo'
+
 import FourOhFour from '../assets/four-oh-four.svg'
 
 const PageNotFound = () => {
@@ -33,6 +35,7 @@ const PageNotFound = () => {
 
   return (
     <Layout>
+      <SEO title="Page Not Found" />
       <article ref={fourRef} className="main info-page">
         <h3 className="info-page__heading">
           Could not find the page you are looking for&hellip;

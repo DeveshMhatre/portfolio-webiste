@@ -5,7 +5,8 @@
   "description": "Portfolio Website",
   "author": "Devesh Mhatre",
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "portfolio"
   ],
   "scripts": {
     "develop": "gatsby develop",

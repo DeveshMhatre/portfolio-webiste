@@ -4,6 +4,8 @@ import { gsap } from 'gsap'
 
 import Layout from '../layouts/layout'
 
+import SEO from './seo'
+
 import MessageSent from '../assets/message-sent.svg'
 
 const ThankYou = () => {
@@ -32,6 +34,7 @@ const ThankYou = () => {
   })
   return (
     <Layout>
+      <SEO title="Thank You" />
       <article ref={thankRef} className="main info-page">
         <h3 className="info-page__heading">Thank you for getting in touch!</h3>
         <p className="info-page__message">

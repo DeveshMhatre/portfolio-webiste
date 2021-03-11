@@ -4,6 +4,8 @@ import { gsap } from 'gsap'
 
 import Layout from '../layouts/layout'
 
+import SEO from './seo'
+
 import contactReducer from '../utils/contactReducer'
 
 const initialValue = { name: '', email: '', message: '' }
@@ -47,6 +49,7 @@ const Contact = () => {
 
   return (
     <Layout>
+      <SEO title="Contact Me" />
       <article ref={contactRef} className="main contact">
         <h1 className="contact__heading">Contact Me</h1>
         <form

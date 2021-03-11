@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-
 import { gsap } from 'gsap'
+
+import SEO from './seo'
 
 import Layout from '../layouts/layout'
 import Carousel from '../components/carousel'
@@ -24,6 +25,7 @@ const Home = ({
 
   return (
     <Layout>
+      <SEO />
       <article ref={homeRef} className="main home">
         <Carousel edges={edges} />
       </article>

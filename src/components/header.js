@@ -1,16 +1,19 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { useLocation } from '@reach/router'
 
 import SiteLogo from '../components/site-logo'
 
 import Close from '../assets/close.svg'
 
 const Header = () => {
+  const { pathname } = useLocation()
+
   return (
     <header className="head">
       <nav className="head__nav">
         <SiteLogo />
-        {location.pathname === '/' ? (
+        {pathname === '/' ? (
           <Link
             to="/"
             activeStyle={{

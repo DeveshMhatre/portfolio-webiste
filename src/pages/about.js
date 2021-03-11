@@ -3,6 +3,8 @@ import { gsap } from 'gsap'
 
 import Layout from '../layouts/layout'
 
+import SEO from './seo'
+
 import Socials from '../components/socials'
 
 const About = () => {
@@ -18,6 +20,7 @@ const About = () => {
 
   return (
     <Layout>
+      <SEO title="About Me" />
       <article ref={aboutRef} className="main about">
         <section className="about__info">
           <h1 className="about__info--heading">My name is Devesh</h1>
