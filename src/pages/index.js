@@ -60,7 +60,7 @@ export default Home
 
 export const projectQuery = graphql`
   query {
-    allMarkdownRemark(limit: 3) {
+    allMarkdownRemark(sort: { order: ASC, fields: id }, limit: 3) {
       edges {
         node {
           id
