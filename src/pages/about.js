@@ -28,7 +28,7 @@ const About = () => {
             I am a Front-End Web Developer
           </h3>
           <a
-            href="../assets/devesh-mhatre-frontend-resume.pdf"
+            href="/DeveshMhatre-Resume.pdf"
             className="btn btn--rounded about__info--cta"
             title="Download Resume"
             download
